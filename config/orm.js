@@ -34,17 +34,26 @@ function objToSql(ob) {
     return arr.toString();
 }
 
+///USED FOR TESTING ORM FUNCTIONING
+
+// let tableInput = "burgers"; 
+// let table = "burgers"; 
+// let cols = ["burger_name", "devoured"]
+// let vals = ['burger-test', false]
+// let objColVals = {devoured: true}; 
+// let condition = "id = 1"
+
 
 let orm = {
 
 
-    all: function (tableInput, cb) {
+    selectAll: function (tableInput, cb) {
         var queryString = `SELECT * FROM ${tableInput};`;
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
-            console.log("all/show orm: " + result)
+            console.log("all/show orm: " + JSON.stringify(result)); 
             cb(result);
 
         });
@@ -92,7 +101,17 @@ let orm = {
 };
 
 
-module.exports = orm; 
+
+module.exports = orm;
+
+// USED FOR TESTING ORM FUNCTIONS
+
+// orm.SelectAll(tableInput); 
+
+// orm.create(table, cols, vals); 
+// orm.update(table, objColVals, condition); 
+
+
 
 
 
