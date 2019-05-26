@@ -53,7 +53,7 @@ let orm = {
             if (err) {
                 throw err;
             }
-            console.log("all/show orm: " + JSON.stringify(result)); 
+            //console.log("all/show orm: " + JSON.stringify(result)); 
             cb(result);
 
         });
@@ -76,7 +76,7 @@ let orm = {
             }
 
            cb(result);
-           console.log("create orm: " + result)
+           //console.log("create orm: " + result)
         });
     },
     update: function(table, objColVals, condition, cb) {
@@ -94,7 +94,7 @@ let orm = {
           }
     
           cb(result);
-          console.log("update orm" + result); 
+         // console.log("update orm" + result); 
         });
       }
 
