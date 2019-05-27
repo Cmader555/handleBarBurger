@@ -20,7 +20,7 @@ let burger = {
 
     },
 
-    create: function (cb) {
+    create: function (cols, vals, cb) {
 
         orm.create("burgers", cols, vals, function(res){
 
@@ -29,7 +29,7 @@ let burger = {
         })
     }, 
 
-    update: function(cb) {
+    update: function(objColVals, condition, cb) {
 
         orm.update("burgers", objColVals, condition, function(res){
 
