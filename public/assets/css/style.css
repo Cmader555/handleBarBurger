@@ -1,6 +1,20 @@
-li {
-    padding: 5px;
-    margin: 5px;
-    background: #faebd7;
-    list-style-type: none;
-  }
+body {
+  background-image: url("../img/food.png");
+}
+
+.waiting {
+  padding: 5px; 
+  margin: 5px; 
+  border-radius: 25px;
+  background: #FAFAD2;
+  list-style-type: none;
+}
+
+.eaten {
+  padding: 5px; 
+  margin: 5px; 
+  border-radius: 25px;
+  background: #FFE4B5;
+  list-style-type: none;
+}
+
