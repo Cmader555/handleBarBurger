@@ -1,20 +1,57 @@
 body {
   background-image: url("../img/food.png");
+  font-family: 'Inder', sans-serif;
+  color: white;
 }
 
 .waiting {
-  padding: 5px; 
-  margin: 5px; 
+  padding: 5px;
+  margin: 5px;
   border-radius: 25px;
-  background: #FAFAD2;
+  background: #FF7F50;
   list-style-type: none;
 }
 
 .eaten {
-  padding: 5px; 
-  margin: 5px; 
+  padding: 5px;
+  margin: 5px;
   border-radius: 25px;
-  background: #FFE4B5;
+  background: #FF7F50;
   list-style-type: none;
 }
 
+span {
+  padding: 5px;
+}
+
+#eatButton {
+  font-size: .90rem;
+}
+
+#eatenSpan {
+  color: #FFFFF0;
+  font-style: italic;
+}
+
+.burgaBottom {
+  background-color: #CD853F
+  ;
+  border-bottom-left-radius: 150px;
+  border-bottom-right-radius: 150px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 15px;
+  margin: 15px;
+}
+
+.burgaTop {
+  background-color: #CD853F;
+  border-top-left-radius: 150px;
+  border-top-right-radius: 150px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  padding: 15px;
+  margin: 15px;
+  height:165px; 
+}

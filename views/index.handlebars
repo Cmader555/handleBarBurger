@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center burgaTop">
         <div class="row">
             <div class="col-sm">
                 <h1>Eat Da Burger!</i></h1>
@@ -9,7 +9,7 @@
     <div class="container d-flex justify-content-center">
         <div class="row">
             <div class="col-sm">
-                <img src="/assets/img/burger.gif" alt="burger gif">
+                <div id="lettuce"></div>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
                         <span>
                             {{this.burger_name}}
                         </span>
-                        <button type="button" class="eatBurger btn btn-danger" id="eatButton" data-id="{{this.id}}">Eat
+                        <button type="button" class="eatBurger btn btn-outline-light" id="eatButton" data-id="{{this.id}}">Eat
                             me! <i class="fas fa-utensils"></i></button>
 
                     </li>
@@ -41,7 +41,7 @@
                     {{#each burgers}}
                     {{#if devoured}}
                     <li class="eaten">
-                        <span>
+                        <span id="eatenSpan">
                             {{this.burger_name}}
                         </span>
 
@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    <div class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center burgaBottom">
         <div class="row">
             <div class="col-sm">
                 <h2>Add a burger</h2>
@@ -64,7 +64,8 @@
                         <label for="burga">Burger:</label>
                         <input type="text" id="burga" name="name">
                     </div>
-                    <button type="submit" class="btn btn-danger">Add Burger</button>
+                    <button type="submit" class="btn btn-outline-light">Add Burger <i class="fas fa-hamburger"></i></button>
+                    <button type="submit" class="btn btn-outline-light">Start Over <i class="fas fa-power-off"></i></button>
                 </form>
 
             </div>
