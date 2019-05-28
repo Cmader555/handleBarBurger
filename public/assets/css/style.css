@@ -4,11 +4,15 @@ body {
   color: white;
 }
 
+h1 {
+  font-size: 3.5rem;
+}
+
 .waiting {
   padding: 5px;
   margin: 5px;
   border-radius: 25px;
-  background: #FF7F50;
+  background: #542d2d;
   list-style-type: none;
 }
 
@@ -16,8 +20,9 @@ body {
   padding: 5px;
   margin: 5px;
   border-radius: 25px;
-  background: #FF7F50;
+  background: #542d2d;
   list-style-type: none;
+  height: 45px;
 }
 
 span {
@@ -34,8 +39,7 @@ span {
 }
 
 .burgaBottom {
-  background-color: #CD853F
-  ;
+  background-color: #CD853F;
   border-bottom-left-radius: 150px;
   border-bottom-right-radius: 150px;
   border-top-left-radius: 10px;
@@ -50,11 +54,59 @@ span {
   border-top-right-radius: 150px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-
   padding: 15px;
   margin: 15px;
-  height:165px; 
+  height: 165px;
 }
 
 /* Burger "toppings" */
 
+#lettuce {
+  background-color: #32CD32;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 15px;
+  border-radius: 25px;
+}
+
+#tomato {
+  background-color: #FF0000;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 15px;
+  border-radius: 25px;
+}
+
+#onion {
+  background-color: #9932CC;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 15px;
+  border-radius: 25px;
+}
+
+#cheese {
+  background-color: rgb(238, 238, 11);
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 15px;
+  border-radius: 25px;
+}
+
+.meat {
+  background-color: #542d2d;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 45px;
+  border-radius: 25px;
+}
