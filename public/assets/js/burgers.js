@@ -45,6 +45,26 @@ $(function () {
     );
 
   })
+
+  $("#deleteButton").on("click", function (event) {
+
+    event.preventDefault();
+
+    $.ajax("/api/burgers/", {
+      type: "PUT",
+      data: ""
+    }).then(
+      function () {
+
+        // Reload the page to get the updated list
+        location.reload();
+
+      }
+    );
+    location.reload();
+
+  })
+
 });
 
 

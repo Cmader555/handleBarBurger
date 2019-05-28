@@ -13,7 +13,7 @@ let burger = {
 
         orm.selectAll("burgers", function (res) {
 
-            cb(res); 
+            cb(res);
             //console.log("burger.js selectAll", res);
 
         })
@@ -22,29 +22,37 @@ let burger = {
 
     create: function (cols, vals, cb) {
 
-        orm.create("burgers", cols, vals, function(res){
+        orm.create("burgers", cols, vals, function (res) {
 
-            cb(res); 
+            cb(res);
             //console.log("burger.js create", res); 
         })
-    }, 
+    },
 
-    update: function(objColVals, condition, cb) {
+    update: function (objColVals, condition, cb) {
 
-        orm.update("burgers", objColVals, condition, function(res){
+        orm.update("burgers", objColVals, condition, function (res) {
 
-            cb(res); 
+            cb(res);
             //console.log("burger.js update", res)
 
 
-        }); 
+        });
 
 
+    },
+
+    delete: function (cb) {
+
+        orm.delete(function (res) {
+
+            cb(res);
+        })
     }
 
 };
 
-module.exports = burger; 
+module.exports = burger;
 
 //USED TO TEST FUNCTIONALITY 
 // burger.selectAll(); 

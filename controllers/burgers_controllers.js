@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get("/", function (req, res) {
   burger.selectAll(function (data) {
-    var hbsObject = {
+    let hbsObject = {
       burgers: data
     };
     console.log(hbsObject);
@@ -52,6 +52,16 @@ router.put("/api/burgers/:id", function(req, res) {
     }
   });
 });
+
+
+router.put("/api/burgers", function(req, res) {
+
+
+    burger.delete(function(result) {
+
+
+    })
+})
 
 
 

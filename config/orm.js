@@ -5,7 +5,7 @@ const connection = require("./connection");
 function printQuestionMarks(num) {
     var arr = [];
 
-    for (var i = 0; i < num; i++) {
+    for (let i = 0; i < num; i++) {
         arr.push("?");
     }
 
@@ -17,8 +17,8 @@ function objToSql(ob) {
     var arr = [];
 
     // loop through the keys and push the key/value as a string int arr
-    for (var key in ob) {
-        var value = ob[key];
+    for (let key in ob) {
+        let value = ob[key];
         // check to skip hidden properties
         if (Object.hasOwnProperty.call(ob, key)) {
 
@@ -48,7 +48,7 @@ let orm = {
 
 
     selectAll: function (tableInput, cb) {
-        var queryString = `SELECT * FROM ${tableInput};`;
+        let queryString = `SELECT * FROM ${tableInput};`;
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
@@ -59,7 +59,7 @@ let orm = {
         });
     },
     create: function (table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + table;
+        let queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();
@@ -75,28 +75,58 @@ let orm = {
                 throw err;
             }
 
-           cb(result);
-           //console.log("create orm: " + result)
+            cb(result);
+            //console.log("create orm: " + result)
         });
     },
-    update: function(table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
-    
+    update: function (table, objColVals, condition, cb) {
+        let queryString = "UPDATE " + table;
+
         queryString += " SET ";
         queryString += objToSql(objColVals);
         queryString += " WHERE ";
         queryString += condition;
-    
+
         console.log(queryString);
-        connection.query(queryString, function(err, result) {
-          if (err) {
-            throw err;
-          }
-    
-          cb(result);
-         // console.log("update orm" + result); 
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+            // console.log("update orm" + result); 
         });
-      }
+    },
+
+    delete: function (cb) {
+        let queryString1 = `DELETE FROM burgers WHERE id > 3;`;
+
+        let queryString2 = `UPDATE burgers SET devoured = 0 WHERE id >= 1;`; 
+
+        console.log(queryString1);
+        connection.query(queryString1, function (err, result) {
+
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+
+        })
+
+        console.log(queryString2);
+        connection.query(queryString2, function (err, result) {
+
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+
+        })
+
+
+    }
 
 };
 
