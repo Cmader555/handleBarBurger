@@ -16,5 +16,5 @@ node server
 ## Usage
 
 Click on the eat me button next to any burger waiting to be devoured. 
-Clicking on the button changes the boolean value of the burger from false to true, and the bruger gets added to the devour column. 
-Adding a burger stores the new burger inside of a database, and that new burger is displayed. You can completely start over, which removes all burgers from the database execpt for the orinal three, and it resets their values to false. 
+Clicking on the button changes the boolean value of the burger from false to true, and the burger gets added to the devour column. 
+Adding a burger stores the new burger inside of a database, and that new burger is displayed. You can completely start over, which removes all burgers from the database except for the original three, and it resets their values to false. 
